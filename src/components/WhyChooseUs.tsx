@@ -43,7 +43,7 @@ export default function WhyChooseUs() {
         <div className="flex flex-col md:flex-row md:items-end justify-between pb-12 border-b border-[#D1E2E8] gap-6">
           <div>
             <span className="text-[10px] uppercase tracking-[0.25em] font-mono text-[#3F6474] block mb-2">
-              02 / Atelier Principles
+              Atelier Principles
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#112732] max-w-xl">
               The Architecture of Restorative Sleep
@@ -65,9 +65,6 @@ export default function WhyChooseUs() {
                   : "md:col-span-4"
               }`}
             >
-              <div className="font-mono text-xs text-[#17637D] font-semibold mb-3">
-                {item.num}
-              </div>
               <h3 className="font-serif text-xl sm:text-2xl text-[#112732] mb-3">
                 {item.title}
               </h3>

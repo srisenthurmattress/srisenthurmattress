@@ -23,6 +23,7 @@ import {
   BedDouble,
   Heart,
   Share2,
+  Maximize2,
 } from "lucide-react";
 
 export type StockBySize = { [size: string]: number };
@@ -167,7 +168,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
     tint: c.hex,
     src: c.image,
     fabric: c.fabric,
-    gallery: FRAMINGS.map((f) => ({ ...f, src: c.image })),
+    gallery: [{ src: c.image, label: `${product.name} — ${c.name} (${c.fabric || "Belgian Jacquard"})` }],
   }));
 
   const count = variants.length;
@@ -552,18 +553,19 @@ export default function ProductDetailClient({ product }: { product: Product }) {
       gsap.to(loupeRef.current, { autoAlpha: 0, scale: 0.7, duration: prefersReduced() ? 0 : 0.2 });
   };
 
-  const v = variants[thumbSet] ?? variants[0];
-  const views: MattressView[] = v
-    ? v.gallery?.length
-      ? v.gallery
-      : FRAMINGS.map((f) => ({ ...f, src: v.src }))
-    : [];
-  const more = Math.max(0, views.length - 3);
+  const v = variants[active] ?? variants[0];
+  const views: MattressView[] = variants.map((vv) => ({
+    src: vv.src,
+    label: `${product.name} — ${vv.name} (${vv.fabric || "Belgian Jacquard"})`,
+    focus: [0.5, 0.5],
+    zoom: 1,
+  }));
 
   // Gallery viewer modal
   const openViewer = (i: number) => {
     opener.current = document.activeElement as HTMLElement | null;
     setViewer(i);
+    pick(i);
   };
   const closeViewer = React.useCallback(() => {
     setViewer(null);
@@ -573,7 +575,12 @@ export default function ProductDetailClient({ product }: { product: Product }) {
   const step = React.useCallback(
     (d: number) => {
       setVZoom(false);
-      setViewer((i) => (i === null ? i : (i + d + views.length) % views.length));
+      setViewer((i) => {
+        if (i === null) return i;
+        const next = (i + d + views.length) % views.length;
+        pick(next);
+        return next;
+      });
     },
     [views.length]
   );
@@ -731,7 +738,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
             }
             .snp-title {
               margin: 1.5cqw 0 0;
-              font-family: 'Cormorant Garamond', Garamond, Georgia, serif;
+              font-family: 'Poppins', sans-serif;
               font-size: max(26px, 2.8cqw);
               line-height: 1.15;
               font-weight: 700;
@@ -825,7 +832,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
               left: 50%;
               top: 5%;
               translate: -50% -10%;
-              font-family: 'Cormorant Garamond', Garamond, Georgia, serif;
+              font-family: 'Poppins', sans-serif;
               font-size: 8.5cqw;
               line-height: 1;
               font-weight: 800;
@@ -1061,7 +1068,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
             }
             .snp-price {
               display: inline-block;
-              font-family: 'Cormorant Garamond', Garamond, Georgia, serif;
+              font-family: 'Poppins', sans-serif;
               font-weight: 700;
               font-size: max(22px, 2.2cqw);
               color: #112732;
@@ -1416,52 +1423,159 @@ export default function ProductDetailClient({ product }: { product: Product }) {
               opacity: 1;
               box-shadow: 0 0 0 2px #17637D;
             }
-            @container (max-width: 900px) {
+            @media (max-width: 990px), @container (max-width: 990px) {
+              .snp-root {
+                overflow-x: hidden !important;
+                width: 100% !important;
+                max-width: 100vw !important;
+              }
               .snp-body {
-                grid-template-columns: 1fr;
-                grid-template-rows: auto auto auto;
-                padding: 24px 20px 60px;
-                row-gap: 20px;
-                align-items: start;
+                display: flex !important;
+                flex-direction: column !important;
+                grid-template-columns: 1fr !important;
+                grid-template-rows: auto !important;
+                padding: 16px 16px 48px !important;
+                gap: 20px !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                overflow: hidden !important;
               }
               .snp-stage {
-                order: -1;
-                min-height: 55cqw;
+                order: -1 !important;
+                width: 100% !important;
+                height: 62vw !important;
+                min-height: 220px !important;
+                max-height: 360px !important;
+                position: relative !important;
+                overflow: hidden !important;
+                margin: 0 auto !important;
               }
               .snp-word {
-                font-size: 16cqw;
-                top: 0;
+                display: none !important;
+              }
+              .snp-reflects, .snp-mattress.snp-reflect {
+                display: none !important;
+              }
+              .snp-floor {
+                display: none !important;
+              }
+              .snp-mattress {
+                width: 96% !important;
+                max-width: 480px !important;
+                height: auto !important;
+                aspect-ratio: 16 / 10 !important;
+                border-radius: 8px !important;
+                box-shadow: 0 12px 32px -8px rgba(17, 39, 50, 0.2) !important;
+              }
+              .snp-info {
+                order: 1 !important;
+                width: 100% !important;
+                padding-top: 4px !important;
               }
               .snp-title {
-                font-size: 28px;
+                font-size: 24px !important;
+                line-height: 1.2 !important;
+                margin-top: 8px !important;
               }
               .snp-desc {
-                max-width: none;
+                font-size: 13px !important;
+                line-height: 1.6 !important;
+                margin-top: 10px !important;
+                max-width: 100% !important;
+              }
+              .snp-badge-strip {
+                margin-top: 14px !important;
+                gap: 6px !important;
+              }
+              .snp-badge-pill {
+                padding: 4px 10px !important;
+                font-size: 10.5px !important;
               }
               .snp-thumbs {
-                margin-top: 16px;
-                gap: 12px;
+                margin-top: 14px !important;
+                gap: 8px !important;
+                overflow-x: auto !important;
+                padding-bottom: 4px !important;
+                -webkit-overflow-scrolling: touch !important;
               }
               .snp-thumb {
-                width: 60px;
-                height: 40px;
+                width: 64px !important;
+                height: 44px !important;
+                border-radius: 6px !important;
+                flex-shrink: 0 !important;
               }
               .snp-more {
-                width: 40px;
-                height: 40px;
+                width: 44px !important;
+                height: 44px !important;
+                border-radius: 6px !important;
+                flex-shrink: 0 !important;
               }
               .snp-buy {
-                order: 1;
-                padding: 20px;
+                order: 2 !important;
+                width: 100% !important;
+                padding: 18px !important;
+                border-radius: 12px !important;
+                margin-top: 4px !important;
               }
               .snp-sizes {
-                gap: 8px;
+                display: grid !important;
+                grid-template-columns: repeat(auto-fill, minmax(78px, 1fr)) !important;
+                gap: 8px !important;
+                margin-top: 8px !important;
               }
               .snp-size {
-                padding: 8px 12px;
+                padding: 8px 10px !important;
+                font-size: 11px !important;
+                border-radius: 6px !important;
+                text-align: center !important;
+              }
+              .snp-swatches {
+                gap: 10px !important;
+                margin-top: 8px !important;
+              }
+              .snp-swatch {
+                width: 32px !important;
+                height: 32px !important;
               }
               .snp-actions {
-                margin-top: 20px;
+                margin-top: 18px !important;
+                gap: 10px !important;
+                width: 100% !important;
+              }
+              .snp-cta, .snp-whatsapp-btn {
+                height: 46px !important;
+                min-height: 46px !important;
+                font-size: 11.5px !important;
+                border-radius: 6px !important;
+                width: 100% !important;
+              }
+              .snp-hint {
+                display: none !important;
+              }
+              .snp-viewer {
+                padding: 12px !important;
+              }
+              .snp-box {
+                width: 100% !important;
+                gap: 10px !important;
+              }
+              .snp-frame {
+                aspect-ratio: 16 / 11 !important;
+                max-height: 60vh !important;
+              }
+              .snp-nav-l {
+                left: 8px !important;
+              }
+              .snp-nav-r {
+                right: 8px !important;
+              }
+              .snp-vbtn {
+                width: 36px !important;
+                height: 36px !important;
+              }
+              .snp-rail button {
+                width: 60px !important;
+                height: 40px !important;
               }
             }
             @media (prefers-reduced-motion: reduce) {
@@ -1504,31 +1618,65 @@ export default function ProductDetailClient({ product }: { product: Product }) {
                 </span>
               </div>
 
-              {/* Thumbnails to open gallery */}
-              <div className="snp-thumbs">
-                <span className="snp-thumbset" ref={thumbsRef}>
-                  {views.slice(0, 3).map((vw, i) => (
-                    <button
-                      key={i}
-                      type="button"
-                      className="snp-thumb"
-                      aria-label={`View ${vw.label ?? `photo ${i + 1}`}`}
-                      onClick={() => openViewer(i)}
-                    >
-                      <span className="snp-view" style={viewStyle(vw)} />
-                    </button>
-                  ))}
-                </span>
-                {more > 0 && (
+              {/* Color Variation Product Image Thumbnails */}
+              <div className="mt-8 space-y-2.5">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10.5px] uppercase tracking-[0.2em] font-mono text-[#3F6474]">
+                    Colorway Variations ({variants.length})
+                  </span>
+                  <span className="text-[10px] font-mono text-[#17637D] font-medium">
+                    {variants[active]?.name} • {variants[active]?.fabric}
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-3 overflow-x-auto pb-2 scrollbar-none">
+                  {variants.map((vv, i) => {
+                    const isSelected = i === active;
+                    return (
+                      <button
+                        key={vv.name}
+                        type="button"
+                        onClick={() => pick(i)}
+                        title={`${vv.name} - ${vv.fabric || "Premium Fabric"}`}
+                        aria-pressed={isSelected}
+                        className={`group relative flex-shrink-0 w-20 sm:w-24 aspect-[16/11] border rounded-md overflow-hidden transition-all ${
+                          isSelected
+                            ? "border-[#17637D] ring-2 ring-[#17637D]/35 shadow-md scale-105"
+                            : "border-[#D1E2E8] opacity-75 hover:opacity-100 hover:border-[#3F6474]"
+                        }`}
+                      >
+                        <Image
+                          src={vv.src}
+                          alt={vv.name}
+                          fill
+                          className="object-cover"
+                          sizes="100px"
+                        />
+                        <div className="absolute top-1.5 left-1.5 z-10">
+                          <span
+                            className="block w-2.5 h-2.5 rounded-full border border-white/80 shadow-sm"
+                            style={{ backgroundColor: vv.swatch }}
+                          />
+                        </div>
+                        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0A181F]/90 via-[#0A181F]/40 to-transparent px-1.5 py-1">
+                          <span className="text-[9px] font-mono text-white block truncate leading-tight">
+                            {vv.name}
+                          </span>
+                        </div>
+                      </button>
+                    );
+                  })}
+
                   <button
                     type="button"
-                    className="snp-more"
-                    aria-label={`View all ${views.length} photos`}
-                    onClick={() => openViewer(3)}
+                    onClick={() => openViewer(active)}
+                    title="Enlarge Product Image"
+                    className="flex-shrink-0 w-10 sm:w-11 aspect-[16/11] bg-[#112732] text-white hover:bg-[#17637D] transition-colors rounded-md border border-[#112732] flex flex-col items-center justify-center gap-0.5 text-[9px] font-mono uppercase"
                   >
-                    +{more}
+                    <Maximize2 className="w-3.5 h-3.5" />
+                    <span>Zoom</span>
                   </button>
-                )}
+                </div>
               </div>
             </div>
 
@@ -1861,6 +2009,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
                       onClick={() => {
                         setVZoom(false);
                         setViewer(i);
+                        pick(i);
                       }}
                     >
                       <span className="snp-view" style={viewStyle(vw)} />
@@ -1890,7 +2039,6 @@ export default function ProductDetailClient({ product }: { product: Product }) {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="border-t border-[#D1E2E8] pt-6 space-y-2">
-                <span className="font-mono text-xs text-[#17637D] font-bold block mb-1">STANDARD 01</span>
                 <h3 className="font-serif text-xl text-[#112732]">{product.warranty}</h3>
                 <p className="text-xs text-[#2E5160] font-light leading-relaxed">
                   Every mattress undergoes 100-cycle mechanical roller tests to verify zero sag and lifetime architectural core stability.
@@ -1898,7 +2046,6 @@ export default function ProductDetailClient({ product }: { product: Product }) {
               </div>
 
               <div className="border-t border-[#D1E2E8] pt-6 space-y-2">
-                <span className="font-mono text-xs text-[#17637D] font-bold block mb-1">STANDARD 02</span>
                 <h3 className="font-serif text-xl text-[#112732]">Direct White-Glove Dispatch</h3>
                 <p className="text-xs text-[#2E5160] font-light leading-relaxed">
                   Delivered safely into your private master bedroom and placed onto your bed frame, with all transit wrap removed.
@@ -1906,7 +2053,6 @@ export default function ProductDetailClient({ product }: { product: Product }) {
               </div>
 
               <div className="border-t border-[#D1E2E8] pt-6 space-y-2">
-                <span className="font-mono text-xs text-[#17637D] font-bold block mb-1">STANDARD 03</span>
                 <h3 className="font-serif text-xl text-[#112732]">{product.trial}</h3>
                 <p className="text-xs text-[#2E5160] font-light leading-relaxed">
                   Experience your mattress in the quiet of your bedroom for 100 nights. If your body is not fully rested, our team assists you.

@@ -156,17 +156,6 @@ function FacebookIcon({ className = "w-4 h-4" }: { className?: string }) {
 }
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email.trim()) {
-      setSubscribed(true);
-      setEmail("");
-    }
-  };
-
   return (
     <footer className="bg-[#0A181F] text-[#F4F8FA] border-t border-[#1C3B49]">
       {/* Primary Footer Section */}
@@ -309,6 +298,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/gallery"
+                  className="text-[#D1E2E8]/80 hover:text-white transition-colors"
+                >
+                  Gallery Archive
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/contact"
                   className="text-[#D1E2E8]/80 hover:text-white transition-colors"
                 >
@@ -336,10 +333,10 @@ export default function Footer() {
             </p>
             <div className="space-y-1 text-xs">
               <a
-                href="tel:+919876543210"
+                href="tel:+916369152486"
                 className="block font-mono text-white hover:text-[#2685A5] transition-colors"
               >
-                +91 98765 43210
+                +91 63691 52486
               </a>
               <a
                 href="mailto:srisenthurmattress@gmail.com"
@@ -347,36 +344,10 @@ export default function Footer() {
               >
                 srisenthurmattress@gmail.com
               </a>
-              <p className="text-[#3F6474] text-[11px] pt-1">
-                Atelier Workshop: Tiruppur - Coimbatore Highway, Tamil Nadu
+              <p className="text-[#3F6474] text-[11px] pt-1 leading-relaxed">
+                Mettur main road, Krishnapuram, Kuppichipalayam, Bhavani - (TK), Erode - (DT).
               </p>
             </div>
-
-            {/* Subtle Minimal Form */}
-            <form onSubmit={handleSubscribe} className="pt-2">
-              <div className="relative flex items-center border-b border-[#2E5160] focus-within:border-[#17637D] transition-colors">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Join our private client register"
-                  className="w-full bg-transparent py-2 text-xs text-white placeholder-[#3F6474] focus:outline-none"
-                  required
-                />
-                <button
-                  type="submit"
-                  aria-label="Subscribe"
-                  className="text-[#2685A5] hover:text-white transition-colors p-1"
-                >
-                  <ArrowUpRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
-              {subscribed && (
-                <p className="text-[10px] text-[#2685A5] font-mono mt-1">
-                  Thank you. Your address is registered.
-                </p>
-              )}
-            </form>
           </div>
         </div>
       </div>

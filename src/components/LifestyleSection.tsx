@@ -12,7 +12,7 @@ export default function LifestyleSection() {
         {/* Section Index */}
         <div className="mb-12">
           <span className="text-[10px] uppercase tracking-[0.25em] font-mono text-[#3F6474] block mb-2">
-            03 / Sanctum & Form
+            Sanctum & Form
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#112732] max-w-2xl leading-[1.15]">
             A Sanctuary Sculpted for Deep Regeneration
@@ -33,7 +33,7 @@ export default function LifestyleSection() {
               />
             </div>
             <p className="text-[11px] font-mono text-[#3F6474] mt-3">
-              FIG. 01 — ARCHITECTURAL RESIDENCE, COIMBATORE. THE ROYAL INDULGENCE HYBRID IN OATMEAL LINEN.
+              ARCHITECTURAL RESIDENCE, COIMBATORE. THE ROYAL INDULGENCE HYBRID IN OATMEAL LINEN.
             </p>
           </div>
 

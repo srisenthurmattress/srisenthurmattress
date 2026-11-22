@@ -53,7 +53,7 @@ export default function ContactPage() {
 
     const messageText = lines.join("\n");
     const encodedText = encodeURIComponent(messageText);
-    const whatsappUrl = `https://wa.me/919876543210?text=${encodedText}`;
+    const whatsappUrl = `https://wa.me/916369152486?text=${encodedText}`;
 
     setSubmittedWhatsAppUrl(whatsappUrl);
 
@@ -111,7 +111,7 @@ export default function ContactPage() {
               Consultation & Inquiries
             </h1>
             <p className="text-xs sm:text-sm text-[#D1E2E8]/80 font-light max-w-xl mt-3 leading-relaxed">
-              Schedule a private sleep consultation at our Coimbatore showroom, submit bespoke dimensions, or speak directly with our senior orthopedic bedding craftsmen.
+              Schedule a private sleep consultation at our Bhavani, Erode showroom, submit bespoke dimensions, or speak directly with our senior orthopedic bedding craftsmen.
             </p>
           </div>
         </section>
@@ -132,11 +132,11 @@ export default function ContactPage() {
                   </div>
 
                   <h2 className="text-3xl sm:text-4xl font-serif text-[#112732] leading-tight">
-                    The Coimbatore Atelier
+                    The Bhavani Atelier
                   </h2>
 
                   <p className="text-xs sm:text-sm text-[#2E5160] font-light leading-relaxed">
-                    Our flagship experience center and production atelier are situated in Western Tamil Nadu. Discerning homeowners, orthopedic consultants, and interior architects are welcome for private trial sessions and custom dimensional tailoring.
+                    Our flagship experience center and production atelier are situated in Erode district, Tamil Nadu. Discerning homeowners, orthopedic consultants, and interior architects are welcome for private trial sessions and custom dimensional tailoring.
                   </p>
                 </div>
 
@@ -152,10 +152,10 @@ export default function ContactPage() {
                         Experience Center & Works
                       </span>
                       <p className="font-sans text-xs sm:text-sm text-[#112732] leading-relaxed font-normal">
-                        Avinashi Road, Near Hope College, Peelamedu, Coimbatore, Tamil Nadu 641004
+                        Mettur main road, Krishnapuram, Kuppichipalayam, Bhavani - (TK), Erode - (DT).
                       </p>
                       <a
-                        href="https://maps.google.com/?q=Peelamedu,Coimbatore,Tamil+Nadu"
+                        href="https://maps.google.com/?q=Krishnapuram,Kuppichipalayam,Bhavani,Erode"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 text-[11px] font-mono text-[#17637D] hover:underline pt-1"
@@ -177,16 +177,10 @@ export default function ContactPage() {
                       </span>
                       <div className="flex flex-col gap-0.5">
                         <a
-                          href="tel:+919876543210"
+                          href="tel:+916369152486"
                           className="font-mono text-sm text-[#112732] hover:text-[#17637D] transition-colors font-medium"
                         >
-                          +91 98765 43210 <span className="text-[10px] font-sans text-[#3F6474] font-normal">(Concierge Mobile)</span>
-                        </a>
-                        <a
-                          href="tel:+914222578900"
-                          className="font-mono text-sm text-[#112732] hover:text-[#17637D] transition-colors"
-                        >
-                          +91 422 257 8900 <span className="text-[10px] font-sans text-[#3F6474] font-normal">(Showroom Desk)</span>
+                          +91 63691 52486 <span className="text-[10px] font-sans text-[#3F6474] font-normal">(Concierge & Workshop)</span>
                         </a>
                       </div>
                     </div>
@@ -249,7 +243,7 @@ export default function ContactPage() {
                   </p>
 
                   <a
-                    href="https://wa.me/919876543210?text=Hello%20Sri%20Senthur%20Mattress,%20I%20would%20like%20to%20consult%20regarding%20mattress%20formulations."
+                    href="https://wa.me/916369152486?text=Hello%20Sri%20Senthur%20Mattress,%20I%20would%20like%20to%20consult%20regarding%20mattress%20formulations."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-between w-full px-4 py-3 bg-[#112732] text-white hover:bg-[#17637D] text-xs uppercase tracking-[0.14em] font-medium transition-colors"
@@ -294,7 +288,7 @@ export default function ContactPage() {
                       Your Consultation Request is Registered
                     </h4>
                     <p className="text-xs sm:text-sm text-[#2E5160] max-w-md mx-auto leading-relaxed font-light">
-                      Your inquiry details have been formulated and forwarded to our WhatsApp atelier concierge. A senior bedding craftsman from our Coimbatore workshop will review your cot dimensions promptly.
+                      Your inquiry details have been formulated and forwarded to our WhatsApp atelier concierge. A senior bedding craftsman from our Bhavani, Erode workshop will review your cot dimensions promptly.
                     </p>
 
                     {submittedWhatsAppUrl && (
@@ -491,10 +485,10 @@ export default function ContactPage() {
               <span className="font-serif text-base text-[#112732] block font-semibold mb-0.5">
                 Sri Senthur Mattress Experience Atelier
               </span>
-              <span>GPS Coordinates: 11.0260° N, 77.0118° E • Peelamedu, Coimbatore</span>
+              <span>Mettur main road, Krishnapuram, Kuppichipalayam, Bhavani - (TK), Erode - (DT).</span>
             </div>
             <a
-              href="https://maps.google.com"
+              href="https://maps.google.com/?q=Krishnapuram,Kuppichipalayam,Bhavani,Erode"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 uppercase tracking-wider text-[#17637D] hover:text-[#112732] transition-colors"

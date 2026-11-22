@@ -41,12 +41,10 @@ export default function HomePage() {
           <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full">
             <div className="max-w-3xl space-y-6">
               <div className="flex items-center gap-3 text-[10px] uppercase tracking-[0.3em] font-mono text-[#D1E2E8]">
-                <span>Sri Senthur Atelier</span>
-                <span className="text-[#2685A5]">•</span>
-                <span>Tamil Nadu, India</span>
+                <span>Sri Senthur Mattress</span>
               </div>
 
-              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-white font-normal leading-[1.05] tracking-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-serif text-white font-normal leading-[1.05] tracking-tight">
                 Sleep is an Art. <br />
                 <span className="italic font-light text-[#D1E2E8]">Comfort is Our Craft.</span>
               </h1>
@@ -94,7 +92,7 @@ export default function HomePage() {
                   />
                 </div>
                 <p className="text-[10px] font-mono text-[#3F6474]">
-                  STUDIO ARCHIVE NO. 08 — CLINICAL SPINAL POSTURE ASSESSMENT, TIRUPPUR ATELIER.
+                  CLINICAL SPINAL POSTURE ASSESSMENT, TIRUPPUR ATELIER.
                 </p>
               </div>
 
@@ -102,7 +100,7 @@ export default function HomePage() {
               <div className="lg:col-span-6 space-y-8 lg:pt-4">
                 <div className="space-y-3">
                   <span className="text-[10px] uppercase tracking-[0.25em] font-mono text-[#3F6474] block">
-                    01 / Brand Introduction
+                    Brand Introduction
                   </span>
                   <h2 className="text-3xl sm:text-5xl font-serif text-[#112732] leading-[1.15]">
                     Reverence for Human Anatomy and Natural Equilibrium.
@@ -122,15 +120,15 @@ export default function HomePage() {
                 <div className="border-t border-[#D1E2E8] pt-6 space-y-3 font-mono text-xs text-[#112732]">
                   <div className="flex items-center justify-between py-1 border-b border-[#D1E2E8]/60">
                     <span>Targeted 5-Zone Cervical & Lumbar Support</span>
-                    <span className="text-[#17637D] font-bold">&check;</span>
+
                   </div>
                   <div className="flex items-center justify-between py-1 border-b border-[#D1E2E8]/60">
                     <span>Organic Belgian Jacquards (Zero Toxic VOCs)</span>
-                    <span className="text-[#17637D] font-bold">&check;</span>
+
                   </div>
                   <div className="flex items-center justify-between py-1 border-b border-[#D1E2E8]/60">
                     <span>Custom Millimetre Tailoring for Heritage Bed Frames</span>
-                    <span className="text-[#17637D] font-bold">&check;</span>
+
                   </div>
                 </div>
 
@@ -192,7 +190,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="mb-14">
               <span className="text-[10px] uppercase tracking-[0.25em] font-mono text-[#3F6474] block mb-2">
-                04 / Client Impressions
+                Client Impressions
               </span>
               <h2 className="text-3xl sm:text-4xl font-serif text-[#112732]">
                 Words on Restorative Awakening
@@ -246,7 +244,7 @@ export default function HomePage() {
             <div className="flex flex-col md:flex-row md:items-end justify-between pb-12 border-b border-[#D1E2E8] gap-6">
               <div>
                 <span className="text-[10px] uppercase tracking-[0.25em] font-mono text-[#3F6474] block mb-2">
-                  05 / Cinema & Sleep Science
+                  Cinema & Sleep Science
                 </span>
                 <h2 className="text-3xl sm:text-5xl font-serif text-[#112732] max-w-xl">
                   Glimpse Inside Our Atelier

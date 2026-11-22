@@ -103,14 +103,14 @@ export default function AboutPage() {
                   />
                 </div>
                 <p className="text-[10px] font-mono text-[#3F6474]">
-                  FIG. 02 — FINISHED HIGH-RESILIENCE ORTHOPEDIC CORE PRIOR TO QUILTING.
+                  FINISHED HIGH-RESILIENCE ORTHOPEDIC CORE PRIOR TO QUILTING.
                 </p>
               </div>
 
               {/* Right Column: Narrative */}
               <div className="lg:col-span-7 space-y-8 lg:pt-4">
                 <span className="text-[10px] uppercase tracking-[0.25em] font-mono text-[#3F6474] block">
-                  01 / Company Story
+                  Company Story
                 </span>
                 <h2 className="text-3xl sm:text-5xl font-serif text-[#112732] leading-[1.15]">
                   Born from a Disdain for Mass-Produced Foam.
@@ -153,7 +153,7 @@ export default function AboutPage() {
             <div className="flex flex-col md:flex-row md:items-end justify-between pb-12 border-b border-[#D1E2E8] gap-6">
               <div>
                 <span className="text-[10px] uppercase tracking-[0.25em] font-mono text-[#3F6474] block mb-2">
-                  02 / Material Integrity
+                  Material Integrity
                 </span>
                 <h2 className="text-3xl sm:text-5xl font-serif text-[#112732] max-w-xl">
                   Four Tenets of Sleep Science
@@ -167,9 +167,6 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12">
               {pillars.map((pillar) => (
                 <div key={pillar.num} className="border-b border-[#D1E2E8] pb-10 space-y-3">
-                  <span className="font-mono text-xs text-[#17637D] font-semibold">
-                    {pillar.num}
-                  </span>
                   <h3 className="font-serif text-2xl text-[#112732]">
                     {pillar.title}
                   </h3>
@@ -187,7 +184,7 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="mb-14">
               <span className="text-[10px] uppercase tracking-[0.25em] font-mono text-[#3F6474] block mb-2">
-                03 / Craft Protocol
+                Craft Protocol
               </span>
               <h2 className="text-3xl sm:text-4xl font-serif text-[#112732]">
                 From Raw Ingot to Master Sanctuary
@@ -197,9 +194,6 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {methodology.map((m) => (
                 <div key={m.step} className="border-t border-[#D1E2E8] pt-6 space-y-2">
-                  <span className="font-mono text-xs text-[#17637D] font-bold">
-                    STEP {m.step}
-                  </span>
                   <h4 className="font-serif text-lg text-[#112732]">
                     {m.title}
                   </h4>
@@ -218,7 +212,7 @@ export default function AboutPage() {
             <div className="flex flex-col md:flex-row md:items-end justify-between pb-12 border-b border-[#D1E2E8] gap-6">
               <div>
                 <span className="text-[10px] uppercase tracking-[0.25em] font-mono text-[#3F6474] block mb-2">
-                  04 / Purpose & Strategic Horizon
+                  Purpose & Strategic Horizon
                 </span>
                 <h2 className="text-3xl sm:text-5xl font-serif text-[#112732] max-w-xl">
                   Our Mission & Vision
@@ -236,7 +230,7 @@ export default function AboutPage() {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between pb-4 border-b border-[#D1E2E8]">
                     <span className="font-mono text-xs text-[#17637D] font-bold tracking-wider">
-                      04.1 / OUR MISSION
+                      OUR MISSION
                     </span>
                     <span className="text-[10px] uppercase tracking-[0.2em] font-mono text-[#3F6474]">
                       Everyday Commitment
@@ -256,15 +250,15 @@ export default function AboutPage() {
                 <div className="border-t border-[#D1E2E8] pt-6 space-y-3 font-mono text-xs text-[#112732]">
                   <div className="flex items-center justify-between py-1 border-b border-[#D1E2E8]/60">
                     <span>Targeted 5-Zone Spine Alignment</span>
-                    <span className="text-[#17637D] font-bold">&check;</span>
+
                   </div>
                   <div className="flex items-center justify-between py-1 border-b border-[#D1E2E8]/60">
                     <span>100% Botanical Kerala Latex & Pollachi Coir</span>
-                    <span className="text-[#17637D] font-bold">&check;</span>
+
                   </div>
                   <div className="flex items-center justify-between py-1 border-b border-[#D1E2E8]/60">
                     <span>Direct Factory Atelier Honesty</span>
-                    <span className="text-[#17637D] font-bold">&check;</span>
+
                   </div>
                 </div>
               </div>
@@ -274,7 +268,7 @@ export default function AboutPage() {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between pb-4 border-b border-[#D1E2E8]">
                     <span className="font-mono text-xs text-[#17637D] font-bold tracking-wider">
-                      04.2 / OUR VISION
+                      OUR VISION
                     </span>
                     <span className="text-[10px] uppercase tracking-[0.2em] font-mono text-[#3F6474]">
                       Future Horizon
@@ -294,15 +288,15 @@ export default function AboutPage() {
                 <div className="border-t border-[#D1E2E8] pt-6 space-y-3 font-mono text-xs text-[#112732]">
                   <div className="flex items-center justify-between py-1 border-b border-[#D1E2E8]/60">
                     <span>Pioneering Zero-VOC Botanical Standards</span>
-                    <span className="text-[#17637D] font-bold">&check;</span>
+
                   </div>
                   <div className="flex items-center justify-between py-1 border-b border-[#D1E2E8]/60">
                     <span>Custom Millimetre Tailoring for Heritage Frames</span>
-                    <span className="text-[#17637D] font-bold">&check;</span>
+
                   </div>
                   <div className="flex items-center justify-between py-1 border-b border-[#D1E2E8]/60">
                     <span>Generational 15+ Year Structural Durability</span>
-                    <span className="text-[#17637D] font-bold">&check;</span>
+
                   </div>
                 </div>
               </div>
