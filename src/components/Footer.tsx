@@ -37,7 +37,7 @@ export const TextHoverEffect = ({
       ref={svgRef}
       width="100%"
       height="100%"
-      viewBox="0 0 320 80"
+      viewBox="0 0 520 80"
       xmlns="http://www.w3.org/2000/svg"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -91,8 +91,8 @@ export const TextHoverEffect = ({
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
-        strokeWidth="0.4"
-        className="fill-transparent stroke-[#EDF4F7]/10 font-serif text-5xl sm:text-6xl font-bold tracking-widest transition-opacity duration-500"
+        strokeWidth="0.35"
+        className="fill-transparent stroke-[#EDF4F7]/10 font-serif text-4xl sm:text-5xl font-bold tracking-[0.2em] transition-opacity duration-500"
         style={{ opacity: hovered ? 0.35 : 0.15 }}
       >
         {text}
@@ -105,7 +105,7 @@ export const TextHoverEffect = ({
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
-        className="fill-transparent stroke-[#17637D]/50 font-serif text-5xl sm:text-6xl font-bold tracking-widest transition-all duration-700"
+        className="fill-transparent stroke-[#17637D]/50 font-serif text-4xl sm:text-5xl font-bold tracking-[0.2em] transition-all duration-700"
       >
         {text}
       </text>
@@ -117,10 +117,10 @@ export const TextHoverEffect = ({
         textAnchor="middle"
         dominantBaseline="middle"
         stroke="url(#senthurTextGradient)"
-        strokeWidth="0.5"
+        strokeWidth="0.45"
         fill="url(#senthurTextGradient)"
         mask="url(#senthurTextMask)"
-        className="font-serif text-5xl sm:text-6xl font-bold tracking-widest"
+        className="font-serif text-4xl sm:text-5xl font-bold tracking-[0.2em]"
       >
         {text}
       </text>
@@ -382,9 +382,9 @@ export default function Footer() {
       </div>
 
       {/* Interactive Text Gradient Display */}
-      <div className="relative border-t border-[#16303D] py-10 sm:py-16 overflow-hidden select-none">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-center">
-          <TextHoverEffect text="SRI SENTHUR" className="h-24 sm:h-32 md:h-44 w-full max-w-4xl" />
+      <div className="relative border-t border-[#16303D] py-8 sm:py-12 overflow-hidden select-none">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 flex items-center justify-center">
+          <TextHoverEffect text="SRI SENTHUR MATTRESS" className="h-16 sm:h-24 md:h-32 w-full max-w-5xl" />
         </div>
       </div>
 
