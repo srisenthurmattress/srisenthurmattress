@@ -81,7 +81,7 @@ export default function TermsPage() {
                 5. Jurisdiction & Governance
               </h2>
               <p>
-                All contracts, disputes, and warranty claims are governed by the laws of India, with exclusive jurisdiction in the courts of Coimbatore, Tamil Nadu.
+                All contracts, disputes, and warranty claims are governed by the laws of India, with exclusive jurisdiction in the courts of Erode, Tamil Nadu.
               </p>
             </section>
           </div>

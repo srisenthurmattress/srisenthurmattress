@@ -123,7 +123,7 @@ export default function ProductsPage() {
 
               <div className="lg:col-span-4 flex items-center lg:justify-end">
                 <a
-                  href="https://wa.me/919876543210?text=Hello%20Sri%20Senthur%20Mattress,%20I%20need%20custom%20dimension%20tailoring%20for%20my%20bed%20frame."
+                  href="https://wa.me/916369152486?text=Hello%20Sri%20Senthur%20Mattress,%20I%20need%20custom%20dimension%20tailoring%20for%20my%20bed%20frame."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#112732] text-white hover:bg-[#17637D] text-xs uppercase tracking-[0.16em] font-medium transition-colors"

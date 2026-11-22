@@ -242,7 +242,7 @@ export default function AboutPage() {
                   </h3>
 
                   <p className="text-xs sm:text-sm text-[#2E5160] font-light leading-relaxed">
-                    Our mission is to eliminate sleep debt and chronic musculoskeletal fatigue by engineering mattresses calibrated to the human anatomy. We reject toxic adhesives, synthetic shortcuts, and inflated middleman markups, ensuring every family receives heirloom-grade orthopedic support directly from our Coimbatore workshop.
+                    Our mission is to eliminate sleep debt and chronic musculoskeletal fatigue by engineering mattresses calibrated to the human anatomy. We reject toxic adhesives, synthetic shortcuts, and inflated middleman markups, ensuring every family receives heirloom-grade orthopedic support directly from our Bhavani, Erode workshop.
                   </p>
                 </div>
 
@@ -309,7 +309,7 @@ export default function AboutPage() {
                   &ldquo;A well-crafted mattress is not merely furniture—it is silent medicine that restores body and mind each night.&rdquo;
                 </p>
                 <p className="text-[11px] font-mono text-[#17637D] uppercase tracking-wider">
-                  Sri Senthur Mattress Master Craftsmen • Coimbatore Atelier
+                  Sri Senthur Mattress Master Craftsmen • Bhavani, Erode Atelier
                 </p>
               </div>
               <Link

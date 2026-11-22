@@ -44,7 +44,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
     const text = encodeURIComponent(
       `Hello Sri Senthur Mattress, I am inquiring about "${product.name}" in ${selectedSize} size with "${activeColor?.name}" fabric styling. Please provide a formal quotation and delivery schedule.`
     );
-    window.open(`https://wa.me/919876543210?text=${text}`, "_blank");
+    window.open(`https://wa.me/916369152486?text=${text}`, "_blank");
   };
 
   return (

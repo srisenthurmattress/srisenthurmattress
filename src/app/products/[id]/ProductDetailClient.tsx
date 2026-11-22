@@ -634,7 +634,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
     const text = encodeURIComponent(
       `Hello Sri Senthur Mattress, I am inquiring about "${product.name}" in ${size} size with "${activeColor}" fabric styling. Please provide a formal quotation, current offers, and delivery schedule to my address.`
     );
-    window.open(`https://wa.me/919876543210?text=${text}`, "_blank");
+    window.open(`https://wa.me/916369152486?text=${text}`, "_blank");
   };
 
   const relatedProducts = PRODUCTS.filter((p) => p.id !== product.id).slice(0, 3);
