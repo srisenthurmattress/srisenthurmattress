@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #17637D;
+  --color-primary-light: #2685A5;
+  --color-primary-dark: #0E3B4B;
+  --color-ivory: #F4F8FA;
+  --color-beige: #D1E2E8;
+  --color-chocolate: #112732;
+  --color-brown: #3F6474;
+  --color-gold: #17637D;
+  --color-gold-light: #2685A5;
+  --color-cream: #EDF4F7;
+  --color-charcoal: #0A181F;
+  --font-serif: 'Cormorant Garamond', Garamond, Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+:root {
+  --background: #F4F8FA;
+  --foreground: #112732;
+}
+
+body {
+  background-color: #F4F8FA;
+  color: #112732;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: 'Cormorant Garamond', Garamond, Georgia, 'Times New Roman', serif;
+  letter-spacing: -0.01em;
+}
+
+/* Custom utility classes */
+.bg-ivory { background-color: #F4F8FA; }
+.bg-beige { background-color: #D1E2E8; }
+.bg-chocolate { background-color: #112732; }
+.bg-brown { background-color: #3F6474; }
+.bg-gold { background-color: #17637D; }
+.bg-cream { background-color: #EDF4F7; }
+
+.text-ivory { color: #F4F8FA; }
+.text-beige { color: #D1E2E8; }
+.text-chocolate { color: #112732; }
+.text-brown { color: #3F6474; }
+.text-gold { color: #17637D; }
+.text-charcoal { color: #0A181F; }
+
+.border-gold { border-color: #17637D; }
+.border-beige { border-color: #D1E2E8; }
+.border-chocolate { border-color: #112732; }
+.border-ivory { border-color: #F4F8FA; }
+
+/* Subtle luxury shadows & borders */
+.shadow-luxury {
+  box-shadow: 0 10px 30px -10px rgba(17, 39, 50, 0.08), 0 4px 6px -2px rgba(17, 39, 50, 0.04);
+}
+
+.shadow-luxury-hover {
+  box-shadow: 0 20px 40px -15px rgba(17, 39, 50, 0.15), 0 8px 12px -3px rgba(17, 39, 50, 0.06);
+}
+
+.shadow-modal {
+  box-shadow: 0 25px 60px -15px rgba(10, 24, 31, 0.35);
+}
+
+/* Image reveal / zoom subtle effect */
+.img-zoom {
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.group:hover .img-zoom {
+  transform: scale(1.04);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F8FA;
+}
+::-webkit-scrollbar-thumb {
+  background: #17637D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3F6474;
+}
